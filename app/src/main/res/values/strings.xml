@@ -7,4 +7,14 @@
     <string name="supplier_name">Имя поставщика</string>
     <string name="quantity">Количество:</string>
     <string name="no_data">Нет данных для отображения! \n\n Нажмите на кнопку внизу для добавления элемента.</string>
+    <string name="delete_product_alert">Удалить товар</string>
+    <string name="delete_product_alert_quest">Подтвердить удаление ?</string>
+    <string name="alert_no_answer">Нет</string>
+    <string name="enter_product_title">Введите название товара!</string>
+    <string name="enter_price">Введите цену!</string>
+    <string name="enter_supplier_name">Введите имя поставщика!</string>
+    <string name="enter_supplier_phone">Введите тел. номер поставщика!</string>
+    <string name="enter_product_quantity">Введите количество продукта!</string>
+    <string name="enter_supplier_phone_number">Введите номер тел. поставщика!</string>
+    <string name="alert_yes_answer">Да</string>
 </resources>

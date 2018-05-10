@@ -1,6 +1,5 @@
 package com.alextroy.inventory.activities;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -97,17 +96,14 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 if (product != null) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(DetailsActivity.this);
                     builder
-                            .setTitle("Удалить товар")
-                            .setMessage("Подтвердить удаление ?")
+                            .setTitle(R.string.delete_product_alert)
+                            .setMessage(R.string.delete_product_alert_quest)
                             .setCancelable(false)
-                            .setPositiveButton("Нет", (dialog, i) -> dialog.cancel())
-                            .setNegativeButton("Да", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-                                    Data.deleteData(product.getId());
-                                    finish();
-                                }
+                            .setPositiveButton(R.string.alert_no_answer, (dialog, i) -> dialog.cancel())
+                            .setNegativeButton(R.string.alert_yes_answer, (dialog, id) -> {
+                                dialog.cancel();
+                                Data.deleteData(product.getId());
+                                finish();
                             });
                     builder.create().show();
                 }
@@ -115,31 +111,31 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.save_data:
                 String title = productTitle.getText().toString();
                 if (TextUtils.isEmpty(title)) {
-                    getToast("Введите название товара!");
+                    getToast(getString(R.string.enter_product_title));
                     break;
                 }
 
                 String price = productPrice.getText().toString();
                 if (TextUtils.isEmpty(price)) {
-                    getToast("Введите цену!");
+                    getToast(getString(R.string.enter_price));
                     break;
                 }
 
                 String supplierName = productSupplierName.getText().toString();
                 if (TextUtils.isEmpty(supplierName)) {
-                    getToast("Введите имя поставщика!");
+                    getToast(getString(R.string.enter_supplier_name));
                     break;
                 }
 
                 String supplierPhone = productSupplierPhoneNumber.getText().toString();
                 if (TextUtils.isEmpty(supplierPhone)) {
-                    getToast("Введите тел. номер поставщика!");
+                    getToast(getString(R.string.enter_supplier_phone));
                     break;
                 }
 
                 String stringQuantity = productQuantity.getText().toString();
                 if (TextUtils.isEmpty(String.valueOf(stringQuantity))) {
-                    getToast("Введите количество продукта!");
+                    getToast(getString(R.string.enter_product_quantity));
                     break;
                 }
                 int quantity = Integer.parseInt(stringQuantity);
@@ -167,7 +163,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                     intentCall.setData(Uri.parse("tel:" + productSupplierPhoneNumber.getText().toString()));
                     startActivity(intentCall);
                 } else {
-                    getToast("Введите номер тел. поставщика!");
+                    getToast(getString(R.string.enter_supplier_phone_number));
                 }
                 break;
         }
