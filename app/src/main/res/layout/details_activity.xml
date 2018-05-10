@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_right_16"
+        android:layout_marginTop="@dimen/margin_top_16"
         android:src="@drawable/ic_delete_white_48dp"
         app:backgroundTint="@android:color/holo_red_light" />
 
@@ -22,26 +22,26 @@
         android:id="@+id/product_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/margin_top_12"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/padding_16">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/margin_bottom_16"
+            android:layout_marginTop="@dimen/margin_top_20"
             android:gravity="center"
-            android:text="Описание товара"
-            android:textSize="22sp" />
+            android:text="@string/product_desc"
+            android:textSize="@dimen/text_size_22" />
 
         <EditText
             android:id="@+id/product_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_green_dark"
-            android:hint="Название"
+            android:hint="@string/product_title"
             android:inputType="textCapSentences"
             tools:targetApi="lollipop" />
 
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_green_dark"
-            android:hint="Цена"
+            android:hint="@string/product_price"
             android:inputType="number|numberDecimal"
             tools:targetApi="lollipop" />
 
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_green_dark"
-            android:hint="Имя поставщика"
+            android:hint="@string/supplier_name"
             android:inputType="textCapSentences"
             tools:targetApi="lollipop" />
 
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_green_dark"
-            android:hint="Тел. номер поставщика"
+            android:hint="@string/supplier_phone"
             android:inputType="phone"
             tools:targetApi="lollipop" />
 
@@ -77,13 +77,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_top_16"
             android:src="@drawable/ic_call_white_48dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/margin_top_12"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
                 android:gravity="center"
-                android:hint="Количество"
+                android:hint="@string/quantity"
                 android:inputType="numberSigned"
                 android:singleLine="true"
                 android:textStyle="bold" />
@@ -118,8 +118,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/margin_bottom_16"
+        android:layout_marginEnd="@dimen/margin_right_16"
         android:src="@drawable/ic_check_white_48dp"
         app:backgroundTint="@android:color/holo_green_dark" />
 
