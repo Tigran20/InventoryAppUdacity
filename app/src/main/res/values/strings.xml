@@ -6,4 +6,5 @@
     <string name="supplier_phone">Тел. номер поставщика</string>
     <string name="supplier_name">Имя поставщика</string>
     <string name="quantity">Количество:</string>
+    <string name="no_data">Нет данных для отображения! \n\n Нажмите на кнопку внизу для добавления элемента.</string>
 </resources>
